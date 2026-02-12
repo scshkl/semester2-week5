@@ -13,6 +13,32 @@
  
  int main(void) {
 	 
-	 
+	char message[100];
+	int result=0;
+	/*
+	do{
+		printf("Enter message, 'quit' to exit: ");
+		fgets(message, sizeof(message), stdin);
+		message[strcspn(message, "\n")] = '\0';
+		result = strcmp(message, "quit");
+		if (result){
+			printf("%s\n", message);
+		}
+	}while(result);
+	*/
+
+	while(1){
+		printf("Enter message, 'quit' to exit: ");
+		fgets(message, sizeof(message), stdin);
+		message[strcspn(message, "\n")] = '\0';
+		
+		if (strcmp(message, "quit") == 0) {
+            break;
+        }
+		printf("%s\n", message);
+	}
+
+
+	
 	 return 0;
  }

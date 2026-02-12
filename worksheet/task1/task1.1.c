@@ -10,6 +10,25 @@
 #include <stdio.h>
 
 int main(void) {
+	int i, j, isPrime;
+
+	for (i = 2; i <= 100; i++) {
+        isPrime = 1; // Assume the number is prime
+
+        // Check for divisors from 2 up to i/2
+        for (j = 2; j <= i / 2; j++) {
+            if (i % j == 0) {
+                isPrime = 0; // Found a divisor, so it's not prime
+                break;       // Exit the inner loop early
+            }
+        }
+
+        // If isPrime is still 1, the number is prime
+        if (isPrime == 1) {
+            printf("%d ", i);
+        }
+    }
+	printf("\n");
     
 	return 0;
 }
