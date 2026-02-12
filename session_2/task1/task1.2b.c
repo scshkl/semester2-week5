@@ -14,6 +14,21 @@ int main(void){
  */
 	char choice;
 	// complete the rest of the code here
+	/*
+	while(1){
+		char input;
+		printf("Enter 'q' to quit: ");
+		scanf("%c", &input);
+		if (input=='q'){
+			break;
+		}
+	}
+	*/
+	char input;
+	do{
+		printf("Enter 'q' to quit: ");
+		scanf("%c", &input);
+	}while(input!='q');
 	
     return 0;
 }
